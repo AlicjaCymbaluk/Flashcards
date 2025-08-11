@@ -4,25 +4,26 @@
   <meta charset="UTF-8">
   <title>FlashcardsApp</title>
   <link rel="stylesheet" href="style.css">
-  <link href="/your-path-to-uicons/css/uicons-[your-style].css" rel="stylesheet">
+  <link href="uicons-regular-rounded-3.0.0/uicons-regular-rounded/webfonts/uicons-regular-rounded.css" rel="stylesheet">
 </head>
 <body>
-<div>
+<div class="main-menu">
   <h1>FlashcardsPro</h1>
-  <div class="menu">
-    <ul>
-      <li><a href="#"><i class="fi fi-rr-home"></i>Home</a></li>
-      <li><a href="#">My collection</a></li>
-      <li><a href="#">My marks</a></li>
+  <div>
+    <ul class="menu">
+      <li><button class="button-menu"><i class="fi fi-rr-home"></i> Home</button></li>
+      <li><button class="button-menu"><i class="fi fi-rr-globe"></i> My collection</button></li>
+      <li><button class="button-menu"><i class="fi fi-rr-assept-document"></i> My marks</button></li>
     </ul>
+    <button class="button" id="theme-toggle">Dark mode</button>
   </div>
 </div>
 
-<div>
+<div class="my-collection">
   <h2>My collections</h2>
   <div class="create-collection">
-     <button>Create new collection</button>
-     <button> Set. 1</button>
+     <button class="button" id="button-create-colletion">Create new collection</button>
+     <button class="button"></button> Set. 1</button>
   </div>
 </div>
   <script src="script.js"></script>
