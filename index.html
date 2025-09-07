@@ -8,23 +8,42 @@
 </head>
 <body>
 <div class="main-menu">
-  <h1>FlashcardsPro</h1>
-  <div>
-    <ul class="menu">
-      <li><button class="button-menu"><i class="fi fi-rr-home"></i> Home</button></li>
-      <li><button class="button-menu"><i class="fi fi-rr-globe"></i> My collection</button></li>
-      <li><button class="button-menu"><i class="fi fi-rr-assept-document"></i> My marks</button></li>
-    </ul>
-    <button class="button" id="theme-toggle">Dark mode</button>
+  <h1><i class="fi-rr-cards-blank"></i> FlashcardsPro</h1>
+  <div class="menu">
+      <a href="#" class="button-menu" id="btn-home"><i class="fi fi-rr-home"></i> Home </a>
+      <a href="#"  class="button-menu"id="btn-my-collection"><i class="fi fi-rr-globe"></i> My collection</a>
+      <a href="#"  class="button-menu"id="btn-my-marks"><i class="fi fi-rr-assept-document"></i> My marks</a>
+  </div>
+  <div class="dark-mode">
+    <p>Dark mode</p>
+    <div class="switch">
+      <input class="checkbox" type="checkbox"/>
+      <span class="slider"></span>
+    </div>
   </div>
 </div>
-
-<div class="my-collection">
-  <h2>My collections</h2>
-  <div class="create-collection">
-     <button class="button" id="button-create-colletion">Create new collection</button>
-     <button class="button"></button> Set. 1</button>
+<div class="home">
+  <h2>Welcome!</h2>
+</div>
+<div class="my-collection hidden">
+  <h2 class="h-my-collections">My collections</h2>
+  <div class="my-collections">
+     <button class="btn-collection" id="btn-create-collection">Create new collection</button>
+     <button class="btn-start" >Start game</button>
+     <div class="collection-form"><input type="text" class="collection-name"><button class="submit" onclick="addCollection()">Add collection</button></div>
+     <div class="set-list">
+       <div class="btn-set"><span class="set-name">Set 1. History</span><i class="fi-rr-trash"></i></div>
+      </div>
   </div>
+</div>
+<div class="flash-card hidden">
+  <h1 class="my-collection-name">Collection name</h1>
+  <input type="text" class="flashcard-first-page" placeholder="write question">
+  <input type="text" class="flashcard-second-page" placeholder="write answear">
+  <button class="btn-flashcard">Add flashcard</button> <!--there should be not static info - set number and information from user input?-->
+</div>
+<div class="marks hidden">
+  <h2>MY MARKS</h2>
 </div>
   <script src="script.js"></script>
 </body>

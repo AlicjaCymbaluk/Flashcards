@@ -1,21 +1,178 @@
+
+:root {
+  --main-color: rgb(250, 249, 249);
+}
+.dark-mode-color {
+  --main-color: grey;
+}
+html{
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
-    font-family: sans-serif;
-    text-align: center;
-    background-color: #f9f9f9;
-    padding: 30px;
+  font-family:'Google Sans', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-color);
+  color: black;
+  transition: background-color 0.3s, color 0.3s; /* Transition */
+}
+h1{
+  text-align: center;
+}
+h1, h2{
+font-size: 1rem;
+margin: 0;
+padding: 16px;
+}
+h1 i{
+  margin-right: 6px;
+}
+h2 {
+  margin-left: 40px;
+}
+.main-menu {
+  display: block;
+  display: flex;
+  float: left;
+  flex-direction: column;
+  background-color: whitesmoke;
+  width: 20%;
+  height: 100vh;
+}
+
+.my-collection{
+  flex-direction: column;
+  float: right;
+  width: 80%;
+}
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.menu a.button-menu {
+  padding: 10px 20px;
+  font-size: 17px;
+  text-decoration: none;
+  outline-style: none;
+  margin: 15px 0;
+  width: 150px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  color: #9C9C9C;
+}
+.menu a.button-menu i{
+  margin-right: 6px;
+}
+a.button-menu:hover{
+  color: grey;
+  border-radius: 7px;
+  background-color: #E8E8E8;
+  color: black;
+}
+.dark-mode {
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #9C9C9C;
+ 
+  margin: 15px;
+  padding: 10px;
+  color: #9C9C9C;
+  position: absolute;
+  width: calc(20% - 50px);
+  bottom: 10px;
+}
+.switch {
+  height: 20px;
+  width: 40px;
+  position: relative;
+  display: inline-block;
+}
+.switch input {
+  height: 0;
+  width: 0;
+  opacity: 0;
   }
-  
-  .card, .form-section {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 20px auto;
-    width: 300px;
-    background-color: white;
-    border-radius: 10px;
+.slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(185, 180, 180);
+  border-radius: 50px;
+  cursor: pointer;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50px;
+  left: 3px;
+  bottom: 2px;
+  background-color:rgb(196, 28, 28);
+}
+.checkbox:checked + .slider:before {
+  transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  -webkit-transform: translateX(18px);
   }
-  
-  button {
-    margin: 5px;
-    padding: 10px 20px;
-  }
-  
+.h-my-collections {
+margin-left: 40px;
+margin-bottom: 30px;
+}
+.btn-collection,
+.btn-start,
+.btn-flashcard{
+  font-size: calc(1rem - 1px);
+  background-color:#5ca5ee ;
+  color: white;
+  border: none;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 7px;
+  margin: 10px 40px;
+}
+.btn-start{
+  background-color: rgb(78, 201, 6);
+}
+.btn-flashcard{
+  display: block;
+}
+.btn-set{
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #9C9C9C;
+  margin: 20px 40px;
+  padding: 10px;
+  color: black;
+  width: calc(100% - 100px);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-set i {
+cursor: pointer;
+}
+
+.btn-set:hover{
+  color: grey;
+  border-radius: 7px;
+  background-color: #E8E8E8;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
